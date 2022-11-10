@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    container_name: mysql-crud-spring-react
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - crud-spring-react_data:/var/lib/mysql
+
+volumes:
+  crud-spring-react_data:
